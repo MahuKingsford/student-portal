@@ -1,0 +1,45 @@
+<!-- views/index.ejs — The Landing Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StartoCode | Student Portal</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+  <!-- Intro / Hero section: title, tagline, call-to-action, illustration -->
+  <main class="hero">
+    <div class="hero__text">
+      <h1 class="hero__title">Student Main Portal</h1>
+      <p class="hero__tagline">
+        Unlock your Student Portal registration — join us today for your online courses.
+      </p>
+      <a href="/portal-form" class="btn btn--primary">Get Started</a>
+    </div>
+
+    <div class="hero__art" aria-hidden="true">
+      <!-- Simple original illustration: a student at a laptop with a graduation cap -->
+      <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="180" r="170" fill="var(--color-bg-soft)" />
+        <rect x="90" y="230" width="220" height="14" rx="7" fill="var(--color-purple-light)" />
+        <rect x="120" y="120" width="160" height="110" rx="10" fill="#ffffff" stroke="var(--color-purple)" stroke-width="4" />
+        <rect x="135" y="135" width="130" height="80" rx="4" fill="var(--color-bg-soft)" />
+        <path d="M150 165 L195 145 L240 165 L195 185 Z" fill="var(--color-purple)" />
+        <rect x="190" y="185 " width="10" height="22" fill="var(--color-purple)" />
+        <circle cx="240" cy="170" r="4" fill="var(--color-orange)" />
+        <circle cx="120" cy="90" r="22" fill="var(--color-orange)" opacity="0.85" />
+        <rect x="108" y="108" width="24" height="10" rx="5" fill="var(--color-orange)" opacity="0.85" />
+        <circle cx="300" cy="260" r="14" fill="var(--color-purple-light)" />
+        <circle cx="80" cy="250" r="10" fill="var(--color-purple-light)" />
+      </svg>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+</body>
+</html>

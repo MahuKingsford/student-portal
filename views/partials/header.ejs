@@ -1,0 +1,15 @@
+<%# views/partials/header.ejs — shared top navbar, included on every page %>
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="/" class="navbar__logo" aria-label="StartoCode home">
+      star<span class="navbar__logo-accent">o</span>code
+    </a>
+
+    <nav class="navbar__links">
+      <a href="/" class="navbar__link <%= activeNav === 'home' ? 'is-active' : '' %>">Home</a>
+      <a href="/students" class="navbar__link <%= activeNav === 'students' ? 'is-active' : '' %>">Students</a>
+    </nav>
+
+    <a href="/portal-form" class="navbar__cta">Get Started</a>
+  </div>
+</header>

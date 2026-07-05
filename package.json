@@ -1,0 +1,25 @@
+{
+  "name": "student-portal",
+  "version": "1.0.0",
+  "description": "A simple Student Portal web application: landing page, registration form, students index, and student details pages, backed by SQLite.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node db/seed.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "keywords": [
+    "student-portal",
+    "express",
+    "ejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "multer": "^2.2.0"
+  }
+}

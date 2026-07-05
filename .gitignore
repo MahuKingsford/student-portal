@@ -1,0 +1,6 @@
+node_modules/
+db/students.db
+public/uploads/*
+!public/uploads/.gitkeep
+!public/uploads/seed-*.png
+.DS_Store

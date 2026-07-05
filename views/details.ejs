@@ -1,0 +1,67 @@
+<!-- views/details.ejs — The Student's Details Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StartoCode | <%= student.first_name %> <%= student.last_name %></title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+  <main class="page">
+    <div class="details-card">
+
+      <!-- Photo + name + status badge -->
+      <div class="details-photo">
+        <img src="/uploads/<%= student.image %>" alt="Photo of <%= student.first_name %> <%= student.last_name %>" />
+        <h2><%= student.first_name %> <%= student.last_name %></h2>
+        <span class="status-pill status-pill--<%= student.status %>" id="status-badge"><%= student.status %></span>
+      </div>
+
+      <div class="details-info">
+
+        <h3 class="details-info__heading">Personal Information</h3>
+        <div class="details-grid">
+          <p><strong>Email:</strong> <%= student.email %></p>
+          <p><strong>Gender:</strong> <%= student.gender %></p>
+          <p><strong>Phone Number:</strong> <%= student.phone %></p>
+          <p><strong>Date Of Birth:</strong> <%= student.dob %></p>
+          <p class="details-grid__full"><strong>Address:</strong> <%= student.address %></p>
+        </div>
+
+        <h3 class="details-info__heading">Other Information</h3>
+        <div class="details-grid">
+          <p><strong>State Of Origin:</strong> <%= student.state %></p>
+          <p><strong>Local Govt:</strong> <%= student.lga %></p>
+        </div>
+
+        <h3 class="details-info__heading">Academics Related Information</h3>
+        <div class="details-grid details-grid--academics">
+          <p><strong>Next Of Kin:</strong> <%= student.next_of_kin %></p>
+          <p><strong>Jamb Score:</strong> <%= student.jamb_score %></p>
+          <p><strong>Status:</strong> <span id="status-text"><%= student.status %></span></p>
+
+          <div class="status-changer">
+            <label for="changeStatus"><strong>Change Status:</strong></label>
+            <select id="changeStatus" data-student-id="<%= student.id %>">
+              <option value="" selected disabled>Change Status</option>
+              <option value="admitted">Admitted</option>
+              <option value="undecided">Undecided</option>
+              <option value="rejected">Rejected</option>
+            </select>
+            <span id="status-feedback" class="status-feedback"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/details.js"></script>
+</body>
+</html>
